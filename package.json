@@ -1,0 +1,44 @@
+{
+  "name": "spiral-2d",
+  "version": "1.0.0",
+  "description": "Archimedean/logarithmic spiral functions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js", "logarithmic.js", "archimedean.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dfcreative/spiral-2d"
+  },
+  "keywords": [
+    "spiral",
+    "math",
+    "logarithmic",
+    "archimedean",
+    "canvas",
+    "svg",
+    "golden",
+    "fibonacci",
+    "euler",
+    "fermat",
+    "hyperbolic",
+    "parabolic",
+    "cornu",
+    "lituus",
+    "involute",
+    "clothoid",
+    "evolvent"
+  ],
+  "author": "Deema Yvanow <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfcreative/spiral-2d/issues"
+  },
+  "homepage": "https://github.com/dfcreative/spiral-2d"
+}
