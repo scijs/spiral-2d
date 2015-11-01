@@ -1,10 +1,11 @@
-2d-[spirals](https://en.wikipedia.org/wiki/Spiral) functions. Includes [archimedean](https://en.wikipedia.org/wiki/Archimedean_spiral) and [logarithmic](https://en.wikipedia.org/wiki/Logarithmic_spiral) generic spirals. Useful to draw spiral paths in canvas, svg etc.
+2d-[spiral](https://en.wikipedia.org/wiki/Spiral) functions. Includes [archimedean](https://en.wikipedia.org/wiki/Archimedean_spiral) and [logarithmic](https://en.wikipedia.org/wiki/Logarithmic_spiral) generic spirals. Useful to draw spiral paths in canvas, svg etc.
 
 ## Usage
 
 [![npm install spiral-2d](https://nodei.co/npm/spiral-2d.png?mini=true)](https://npmjs.org/package/spiral-2d/)
 
 ```js
+//require logarithmic spiral (by default)
 var spiral = require('spiral-2d');
 
 //paint spiral curve in canvas
@@ -51,8 +52,6 @@ archimedean.radius(angleInRadians, a, b, c?);
 logarithmic.angle(radius, a, b);
 archimedean.angle(radius, a, b, c?);
 ```
-
-## Spirals
 
 Most of spirals fall into one of two kinds of generic spirals:
 
