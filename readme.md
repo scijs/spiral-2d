@@ -5,8 +5,7 @@
 [![npm install spiral-2d](https://nodei.co/npm/spiral-2d.png?mini=true)](https://npmjs.org/package/spiral-2d/)
 
 ```js
-//require logarithmic spiral (by default)
-var spiral = require('spiral-2d');
+var spiral = require('spiral-2d/logarithmic');
 
 //paint spiral curve in canvas
 canvas.beginPath();
