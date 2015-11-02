@@ -1,6 +1,6 @@
 {
   "name": "spiral-2d",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Archimedean/logarithmic spiral functions",
   "main": "index.js",
   "directories": {
@@ -10,7 +10,9 @@
     "test": "node test.js"
   },
   "files": [
-    "index.js", "logarithmic.js", "archimedean.js"
+    "index.js",
+    "logarithmic.js",
+    "archimedean.js"
   ],
   "repository": {
     "type": "git",
