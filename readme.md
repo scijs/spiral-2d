@@ -8,25 +8,30 @@
 var spiral = require('spiral-2d/logarithmic');
 
 //paint spiral curve in canvas
-canvas.beginPath();
-canvas.moveTo(50,50);
+context.beginPath();
+var center = [50, 50];
+context.moveTo(center[0], center[1]);
 for (var angle = 0; angle <= Math.PI * 4; angle+=0.01) {
-	canvas.lineTo(spiral([50,50], angle));
+	var coords = spiral(center, angle);
+	context.lineTo(coords[0], coords[1]);
 }
-canvas.stroke();
+context.stroke();
 
 //fill spiral sector
-canvas.beginPath();
-canvas.moveTo(spiral([50,50], Math.PI * 2));
+context.beginPath();
+var center = [center[0], center[1]];
+context.moveTo(spiral(center, Math.PI * 2));
 for (var angle = Math.PI * 2; angle <= Math.PI * 3; angle+=0.01) {
-	canvas.lineTo(spiral([50,50], angle));
+	var coords = spiral(center, angle);
+	context.lineTo(coords[0], coords[1]);
 }
-canvas.lineTo(spiral([50,50], Math.PI * 5));
+context.lineTo(spiral(center, Math.PI * 5));
 for (var angle = Math.PI * 5; angle >= Math.PI * 4; angle-=0.01) {
-	canvas.lineTo(spiral([50,50], angle));
+	var coords = spiral(center, angle);
+	context.lineTo(coords[0], coords[1]);
 }
-canvas.lineTo(spiral([50,50], Math.PI * 2));
-canvas.fill();
+context.lineTo(spiral(center, Math.PI * 2));
+context.fill();
 ```
 
 ## API
@@ -50,6 +55,12 @@ archimedean.radius(angleInRadians, a, b, c?);
 //get angle of spiral params
 logarithmic.angle(radius, a, b);
 archimedean.angle(radius, a, b, c?);
+
+//get a/b properies of spirals (to adjust size etc)
+logarithmic.a(radius, angle, b);
+archimedean.a(radius, angle, b, c?);
+logarithmic.b(radius, angle, a);
+archimedean.b(radius, angle, a, c?);
 ```
 
 Most of spirals fall into one of two kinds of generic spirals:
