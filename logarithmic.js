@@ -27,8 +27,22 @@ function angle (radius, a, b) {
 	return Math.log(radius / a) / b;
 };
 
+function a (radius, angle, b, c) {
+	b = b != null ? b : 1;
+	c = c != null ? c : 1;
+	return radius / Math.exp(angle * b);
+};
+
+function b (radius, angle, a, c) {
+	a = a != null ? a : 1;
+	c = c != null ? c : 1;
+	return Math.log(radius / a) / angle;
+};
+
 
 spiral.radius = radius;
 spiral.angle = angle;
+spiral.a = a;
+spiral.b = b;
 
 module.exports = spiral;
